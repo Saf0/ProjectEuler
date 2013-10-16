@@ -1,7 +1,16 @@
 
-public class p14 {
+public class p14 extends EulerProblem {
 
     public static void main(String[] args) {
+        
+        EulerProblem e = new p14();
+        e.computeResult();
+        e.showResult();
+
+    }
+    
+    @Override
+    public void computeResult() {
         
         int maxCollatz = 0;
         int maxStarting = 0;
@@ -17,7 +26,8 @@ public class p14 {
             
         }
         
-        System.out.println(maxStarting);
+        this.result = maxStarting + "";
+        
     }
     
     public static int collatz(long n) {

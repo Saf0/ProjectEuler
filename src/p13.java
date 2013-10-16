@@ -3,11 +3,20 @@ import java.io.FileNotFoundException;
 import java.math.BigInteger;
 import java.util.Scanner;
 
-
-public class p13 {
+public class p13 extends EulerProblem {
 
     static Scanner sc;
+    
     public static void main(String[] args) {
+        
+        EulerProblem e = new p13();
+        e.computeResult();
+        e.showResult();
+        
+    }
+    
+    @Override
+    public void computeResult() {
         
         try {
             sc = new Scanner(new File("p13.txt"));
@@ -24,7 +33,7 @@ public class p13 {
                 sum = sum.add(nums[i]);
             }
             
-            System.out.println(sum);
+            this.result = sum.toString().substring(0, 10) + "";
             
         } catch (FileNotFoundException e) {
             e.printStackTrace();

@@ -1,10 +1,19 @@
 
-public class p6 {
+public class p6 extends EulerProblem {
 
     public static void main(String[] args) {
         
-        System.out.println(squareOfTheSum(100)-sumOfTheSquares(100));
+        EulerProblem e = new p6();
+        e.computeResult();
+        e.showResult();
 
+    }
+    
+    @Override
+    public void computeResult() {
+        
+        this.result = (squareOfTheSum(100) - sumOfTheSquares(100)) + "";
+        
     }
     
     public static int sumOfTheSquares(int n) {

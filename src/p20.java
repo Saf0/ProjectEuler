@@ -1,8 +1,17 @@
 import java.math.BigInteger;
 
-public class p20 {
+public class p20 extends EulerProblem {
 
     public static void main(String[] args) {
+        
+        EulerProblem e = new p20();
+        e.computeResult();
+        e.showResult();
+
+    }
+    
+    @Override
+    public void computeResult() {
         
         BigInteger n = BigInteger.ONE;
         for (int i = 2; i <= 100; i++) {
@@ -16,8 +25,8 @@ public class p20 {
             sum += (s.codePointAt(i) - 48);
         }
         
-        System.out.println(sum);
-
+        this.result = sum + "";
+        
     }
 
 }

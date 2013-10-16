@@ -1,7 +1,16 @@
 
-public class p1 {
+public class p1 extends EulerProblem {
 
     public static void main(String[] args) {
+        
+        EulerProblem e = new p1();
+        e.computeResult();
+        e.showResult();
+
+    }
+    
+    @Override
+    public void computeResult() {
         
         int sum = 0;
         
@@ -9,8 +18,8 @@ public class p1 {
             if (i % 3 == 0 || i % 5 == 0) sum += i;
         }
         
-        System.out.println(sum);
-
+        this.result = sum + "";
+        
     }
 
 }

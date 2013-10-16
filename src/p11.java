@@ -3,15 +3,26 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 
-public class p11 {
+public class p11 extends EulerProblem {
 
     public static void main(String[] args) {
+        
+        EulerProblem e = new p11();
+        e.computeResult();
+        e.showResult();
+
+    }
+    
+    @Override
+    public void computeResult() {
+        
+        Scanner sc;
         
         try {
             
             int n = 20;
             
-            Scanner sc = new Scanner(new File("p11.txt"));
+            sc = new Scanner(new File("p11.txt"));
             int grid[][] = new int[n][n];
             
             for (int j = 0; j < n; j++) {
@@ -74,13 +85,12 @@ public class p11 {
                 }
             }
             
-            
-            System.out.println(max);
-            
+            this.result = max + "";
+        
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-
+        
     }
 
 }

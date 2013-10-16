@@ -1,7 +1,16 @@
 
-public class p2 {
-
+public class p2 extends EulerProblem {
+    
     public static void main(String[] args) {
+        
+        EulerProblem e = new p2();
+        e.computeResult();
+        e.showResult();
+
+    }
+    
+    @Override
+    public void computeResult() {
         
         int f1 = 1;
         int f2 = 1;
@@ -18,8 +27,8 @@ public class p2 {
             
         }
         
-        System.out.println(sum);
-
+        this.result = sum + "";
+        
     }
 
 }

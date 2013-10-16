@@ -1,8 +1,17 @@
 import java.math.BigInteger;
 
-public class p16 {
+public class p16 extends EulerProblem {
 
     public static void main(String[] args) {
+        
+        EulerProblem e = new p16();
+        e.computeResult();
+        e.showResult();
+
+    }
+    
+    @Override
+    public void computeResult() {
         
         BigInteger n = new BigInteger("2");
         n = n.pow(1000);
@@ -16,8 +25,8 @@ public class p16 {
             sum += digit;
         }
         
-        System.out.println(sum);
-
+        this.result = sum + "";
+        
     }
 
 }

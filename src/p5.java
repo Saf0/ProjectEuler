@@ -1,7 +1,16 @@
 
-public class p5 {
+public class p5 extends EulerProblem {
 
     public static void main(String[] args) {
+        
+        EulerProblem e = new p5();
+        e.computeResult();
+        e.showResult();
+
+    }
+    
+    @Override
+    public void computeResult() {
         
         long i = 1;
         
@@ -9,8 +18,8 @@ public class p5 {
             i++;
         }
         
-        System.out.println(i);
-
+        this.result = i + "";
+        
     }
     
     public static boolean isGood(long n) {

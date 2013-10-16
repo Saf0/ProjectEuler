@@ -1,7 +1,16 @@
 
-public class p12 {
+public class p12 extends EulerProblem {
     
     public static void main(String[] args) {
+        
+        EulerProblem e = new p12();
+        e.computeResult();
+        e.showResult();
+        
+    }
+    
+    @Override
+    public void computeResult() {
         
         int i = 2;
         int num = 1;
@@ -9,7 +18,7 @@ public class p12 {
         while (true) {
             
             if (numberOfDivisors(num) >= 500) {
-                System.out.println(num);
+                this.result = num + "";
                 break;
             }
             
