@@ -1,7 +1,16 @@
 
-public class p9 {
+public class p9 extends EulerProblem {
 
     public static void main(String[] args) {
+        
+        EulerProblem e = new p9();
+        e.computeResult();
+        e.showResult();
+        
+    }
+    
+    @Override
+    public void computeResult() {
         
         for (int b = 1; b < 500; b++) {
             for (int a = 1; a < b; a++) {
@@ -14,10 +23,7 @@ public class p9 {
                     int sum = a + b + (int)(c);
                     
                     if (sum == 1000) {
-                        System.out.println("a = " + a);
-                        System.out.println("b = " + b);
-                        System.out.println("c = " + c);
-                        System.out.println("product = " + (a * b * (int)(c)));
+                        this.result = (a * b * (int)(c)) + "";
                         return;
                     }
                 }
@@ -25,7 +31,6 @@ public class p9 {
             }
         }
         
-
     }
 
 }

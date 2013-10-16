@@ -3,11 +3,18 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 
-public class p8 {
-
-    private static Scanner sc;
+public class p8 extends EulerProblem {
 
     public static void main(String[] args) {
+        
+        EulerProblem e = new p8();
+        e.computeResult();
+        e.showResult();
+
+    }
+    
+    @Override
+    public void computeResult() {
         
         try {
             sc = new Scanner(new File("p8.txt"));
@@ -30,13 +37,12 @@ public class p8 {
                 }
             }
             
-            System.out.println(max);
-            
+            this.result = max + "";
             
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-        } 
-
+        }
+        
     }
 
 }
