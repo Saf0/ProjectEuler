@@ -17,4 +17,8 @@ public class EulerProblem {
         
     }
     
+    public void setResult(int x) {
+        this.result = x + "";
+    }
+    
 }
